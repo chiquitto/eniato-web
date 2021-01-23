@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 
+// TODO: copy from https://codepen.io/leoespsanto/pen/zdgJER
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const max = 15
+
+  return Array(15).fill(0).map(_ => (
+    <ul className="collection">
+      <li className="collection-item avatar">
+        {/* <img src="images/yuna.jpg" alt="" class="circle" /> */}
+        <i class="material-icons circle green">insert_chart</i>
+        <span className="title">Title</span>
+        <p>First Line <br /> Second Line</p>
+        <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
+      </li>
+    </ul>
+  ));
 }
 
 export default App;
