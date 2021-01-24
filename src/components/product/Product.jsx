@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
 import ProductService from '../../services/ProductService';
+import Loading from '../Loading';
 
 class Product extends Component {
 
@@ -37,21 +38,21 @@ class Product extends Component {
     const { error, dataFetched, data } = this.state;
 
     if (error) {
-      return <div>Error: {error.message}</div>;
-    } else if (!dataFetched) {
-      return <div>Loading...</div>;
-    } else {
-      return false /*(
-        <Row>
-          <Col m={6} s={12}>
-            <h1>{data.title}</h1>
-            {this.preco('Menor preço', data.min_price)}
-            {this.preco('Maior preço', data.max_price)}
-            {[...data.items.map(item => this.preco(null, item))]}
-          </Col>
-        </Row>
-      )*/
+      return <div>Error: {error.message}</div>
     }
+
+    if (!dataFetched) {
+      return <Loading />
+    }
+
+    return (
+      <React.Fragment>
+        <h1>{data.title}</h1>
+        { this.preco('Menor preço', data.min_price)}
+        { this.preco('Maior preço', data.max_price)}
+        {[...data.items.map(item => this.preco(null, item))]}
+      </React.Fragment>
+    )
   }
 
   preco(title, item) {
