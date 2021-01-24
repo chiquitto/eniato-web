@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'react-materialize';
 
 import { Switch, Route } from 'react-router-dom'
 
@@ -8,19 +7,17 @@ import Product from '../product/Product'
 
 const Content = props => (
   <main>
-    <Container>
-      <Switch>
+    <Switch>
 
-        <Route path="/product/:product_id">
-          <Product />
-        </Route>
+      <Route path="/product/:product_id">
+        <Product />
+      </Route>
 
-        <Route exact path="/">
-          <Products />
-        </Route>
+      <Route exact path="/">
+        <Products />
+      </Route>
 
-      </Switch>
-    </Container>
+    </Switch>
   </main>
 )
 

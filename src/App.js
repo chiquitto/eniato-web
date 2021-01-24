@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { Component } from "react";
+import { Switch, Route, Link } from "react-router-dom";
+import "./App.css";
+import { styles } from "./css-common"
+import { withStyles } from '@material-ui/core';
+import Products from "./components/products/Products";
+import Header from "./components/header/Header";
 
-import { BrowserRouter as Router } from 'react-router-dom'
+class App extends Component {
+  render() {
+    // const { classes } = this.props
 
-import Content from './components/content/Content';
-import Header from './components/header/Header';
+    return (
+      <div>
+        <Header />
 
-const App = props => (
-  <Router>
-    <Header />
-    <Content />
-  </Router>
-)
+        <Switch>
+          <Route exact path={["/"]} component={Products} />
+          {/* <Route exact path="/add" component={AddTutorial} /> */}
+          {/* <Route path="/tutorials/:id" component={Tutorial} /> */}
+        </Switch>
+      </div>
+    );
+  }
+}
 
-export default App
+export default withStyles(styles)(App);

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import { withRouter } from 'react-router-dom';
-import { Row, Col } from 'react-materialize';
 
 import ProductService from '../../services/ProductService';
 
@@ -42,7 +41,7 @@ class Product extends Component {
     } else if (!dataFetched) {
       return <div>Loading...</div>;
     } else {
-      return (
+      return false /*(
         <Row>
           <Col m={6} s={12}>
             <h1>{data.title}</h1>
@@ -51,7 +50,7 @@ class Product extends Component {
             {[...data.items.map(item => this.preco(null, item))]}
           </Col>
         </Row>
-      )
+      )*/
     }
   }
 

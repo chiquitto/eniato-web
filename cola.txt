@@ -1,1 +1,17 @@
+# Template utilizado
+https://github.com/bezkoder/react-material-ui-examples
+
 https://github.com/leonardoscorza/react-spa
+https://marmelab.com/react-admin/List.html
+https://github.com/anselm94/googlekeepclone
+https://www.pluralsight.com/guides/styling-a-react-app-with-material-ui
+
+https://medium.com/develop-and-deploy-a-complex-serverless-web-app/add-react-router-dom-to-a-reactjs-with-material-ui-project-part-4-f8d7e02f041a
+https://medium.com/develop-and-deploy-a-complex-serverless-web-app/add-authentication-to-your-reactjs-project-using-amplify-auth-part-5-aad47ec737e3
+https://medium.com/develop-and-deploy-a-complex-serverless-web-app/create-a-logout-button-listening-to-authentication-updates-within-your-aws-amplify-react-82685537bb4a
+https://medium.com/develop-and-deploy-a-complex-serverless-web-app/define-your-model-requirements-and-setup-your-graphql-api-to-dynamodb-with-aws-amplify-part-7-2e627defc318
+https://medium.com/develop-and-deploy-a-complex-serverless-web-app/upload-and-resize-images-to-the-cloud-with-aws-s3-amplify-and-react-part-8-705a7dc49680
+
+https://dev.to/rossanodan/building-a-navigation-drawer-with-material-ui-and-react-router-dom-1j6l
+https://bezkoder.com/react-material-ui-examples-crud/
+
