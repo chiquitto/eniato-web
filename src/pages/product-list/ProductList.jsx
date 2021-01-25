@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import ProductItem from './ProductItem';
 import ProductsService from '../../services/ProductsService';
 import './ProductList.css';
-import { List } from '@material-ui/core';
-import Loading from '../Loading';
+import { Container, List } from '@material-ui/core';
+import Loading from '../../components/Loading';
+import Error from '../../components/Error';
 
 export default class ProductList extends Component {
 
@@ -25,19 +26,34 @@ export default class ProductList extends Component {
         this.setState({
           dataFetched: true,
           data: response.data.data
-        });
+        })
+      })
+      .catch(error => {
+        this.setState({
+          dataFetched: true,
+          error: error
+        })
       })
   }
 
   render() {
+    return (
+      <Container>
+        {this.render1()}
+      </Container>
+    )
+  }
+
+  render1() {
     const { error, dataFetched, data } = this.state;
+
     if (error) {
-      return <div>Error: {error.message}</div>
+      return <Error error={error} />
     }
     if (!dataFetched) {
       return <Loading />
     }
-    
+
     return (
       <List>
         {data.products.map(product => (
